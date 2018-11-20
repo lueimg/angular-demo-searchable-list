@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { SearchableContainerComponent } from './searchable-container/searchable-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchableContainerComponent
   ],
   imports: [
     BrowserModule,

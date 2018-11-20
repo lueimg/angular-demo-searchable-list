@@ -1,3 +1,19 @@
-<h1>
-  {{title}}
-</h1>
+<section class="container" style="margin: 10px;">
+	<input
+    [formControl]="searchControl"
+    style="margin-bottom: 10px;"
+    class="form-control"
+    placeholder="Search" />
+
+<searchable-container [searchTerm]="searchControl.value" #container="searchableContainer">
+  Result: {{container.count}}
+  <ul class="list-group">
+    <li class="list-group-item" searchable="Javascript" searchableHighlight></li>
+    <li class="list-group-item" searchable="Angular" searchableHighlight></li>
+    <li class="list-group-item" searchable="Typescript" searchableHighlight></li>
+    <li class="list-group-item" searchable="RxJS" searchableHighlight></li>
+    <li class="list-group-item" searchable="Akita" searchableHighlight></li>
+  </ul>
+</searchable-container>
+
+</section>
